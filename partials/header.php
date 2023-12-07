@@ -9,6 +9,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="https://api.iconify.design/logos:php-alt.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./src/assets/css/style.css">
     <title>Recette du monde</title>
   </head>

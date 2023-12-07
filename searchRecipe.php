@@ -43,7 +43,7 @@ if (isset($_POST['recipe'])) {
         }
         echo '<h2> Liste des ingredients</h2>';
 
-        echo '<ul  class="list-group list-group-vertical">';
+        echo '<ul  class="list-group list-group-vertical m-2">';
 
         foreach ($filteredMeals as $meal) {
             echo "<li class='list-group-item'>{$meal['strIngredient1']}</li>";
