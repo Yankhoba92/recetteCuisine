@@ -6,7 +6,7 @@
             <a class="nav-link" href="#">Accueil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Catégories</a>
+                <a class="nav-link" href="./categories.php">Catégories</a>
             </li>
 
           </ul>

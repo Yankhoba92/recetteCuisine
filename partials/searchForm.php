@@ -4,6 +4,7 @@
               type="search"
               placeholder="Pasta, Chicken"
               aria-label="Search"
+              name="recipe"
             />
             <button class="btn btn-outline-success" type="submit">
               Recherche
