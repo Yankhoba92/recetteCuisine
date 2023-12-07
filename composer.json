@@ -1,0 +1,17 @@
+{
+    "name": "yankhoba/recette-cuisine",
+    "autoload": {
+        "psr-4": {
+            "Yankhoba\\RecetteCuisine\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yankhoba",
+            "email": "bagayoko.yan@gmail.com"
+        }
+    ],
+    "require": {
+        "twbs/bootstrap": "^5.3"
+    }
+}
