@@ -17,23 +17,44 @@ if (isset($_POST['recipe'])) {
     $dataRecipe = json_decode($dataRecipe, true);
 
     $meals = $dataRecipe['meals'];
-
-    echo "<p>Résultats de recherche pour : $recherche</p>";
-
     $filteredMeals = array_filter($meals, function($meal) use ($recherche) {
         return stripos($meal['strMeal'], $recherche) !== false;
     });
 
     // Afficher les résultats de la recherche
     if (!empty($filteredMeals)) {
-        echo '<ul>';
+       echo' <section class="container">';
+       
         foreach ($filteredMeals as $meal) {
-            echo '<li>';
-            echo '<strong>Nom du plat:</strong> ' . $meal['strMeal'] . '<br>';
-            echo '<strong>Image:</strong> <img src="' . $meal['strMealThumb'] . '" alt="' . $meal['strMeal'] . '"><br>';
-            echo '</li>';
+            echo " <h1 class=' text-center m-5'>{$meal['strMeal']}</h1>";
+            echo '<div class="card mb-3" style="max-width: 8000px;">';
+            echo    '<div class="row g-0">';
+            echo        '<div class="col-md-4">';
+            echo            '<img src="' . $meal['strMealThumb'] . '" alt="' . $meal['strMeal'] . '" class="img-fluid rounded-start" alt="...">';
+            echo        '</div>';
+            echo        '<div class="col-md-8">';
+            echo            '<div class="card-body">';
+            echo                "<h5 class='card-title'>{$meal['strMeal']}</h5>";
+            echo                "<p class='card-text'>{$meal['strInstructions']}</p>";
+            echo            '</div>';
+            echo        '</div>';
+            echo    '</div>';
+            echo '</div>';
         }
-        echo '</ul>';
+        echo '<h2> Liste des ingredients</h2>';
+
+        echo '<ul  class="list-group list-group-vertical">';
+
+        foreach ($filteredMeals as $meal) {
+            echo "<li class='list-group-item'>{$meal['strIngredient1']}</li>";
+            echo "<li class='list-group-item'>{$meal['strIngredient2']}</li>";
+            echo "<li class='list-group-item'>{$meal['strIngredient3']}</li>";
+            echo "<li class='list-group-item'>{$meal['strIngredient4']}</li>";
+            echo "<li class='list-group-item'>{$meal['strIngredient5']}</li>";
+        }
+        echo' </ul>';
+        echo' </section>';
+
     } else {
         echo 'Aucun plat trouvé.';
     }
@@ -42,4 +63,8 @@ if (isset($_POST['recipe'])) {
 }
 
 include __DIR__.'/partials/footer.php';
+
+
+            
 ?>
+

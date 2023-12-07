@@ -6,7 +6,8 @@
 }
 body{
         background-color: #355723;
+        text-align: center;
 }
-.nav-link{
+.nav-link, h1{
     color: #ff3823;
 }
