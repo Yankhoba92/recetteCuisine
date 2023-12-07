@@ -6,7 +6,7 @@
               aria-label="Search"
               name="recipe"
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button class="btn btn-outline-warning" type="submit">
               Recherche
             </button>
           </form>
